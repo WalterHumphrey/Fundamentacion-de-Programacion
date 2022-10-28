@@ -1,5 +1,4 @@
 import galapagar
-import turtle
 
 NUMERO_DE_ESTUDIO = 3
 ANCHURA_VENTANA = 500
