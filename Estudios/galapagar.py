@@ -37,7 +37,7 @@ def square(t,l,x,y):
     t.pd()
     for i in range(4):
         t.forward(l)
-        t.left(-90)
+        t.left(90)
     t.pu()
     t.setpos(0,0)
     t.pd()
@@ -49,9 +49,9 @@ def rectangle(t,an,al,x,y):
     t.pd()
     for i in range(2):
         t.forward(an)
-        t.left(-90)
+        t.left(90)
         t.forward(al)
-        t.left(-90)
+        t.left(90)
     t.pu()
     t.setpos(0,0)
     t.pd()
