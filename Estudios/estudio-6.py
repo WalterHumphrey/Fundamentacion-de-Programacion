@@ -1,6 +1,6 @@
 import galapagar
 
-NUMERO_DE_ESTUDIO = 4
+NUMERO_DE_ESTUDIO = 6
 ANCHURA_VENTANA = 800
 ALTURA_VENTANA = 800
 
@@ -17,12 +17,14 @@ def main():
     #
     # ...
     
-    t = galapagar.new_turtle("red",5,"turtle")
+    t = galapagar.new_turtle("green",1,"turtle")
     l = 100
+    a = 50
 
-    for i in range(0,4):
-        for j in range(0,4):
-            galapagar.square(t,l,-ANCHURA_VENTANA/2 + i*l, -ALTURA_VENTANA/2 + j*l)
+    for i in range(1,4):
+        galapagar.rectangle(t,l,a,ANCHURA_VENTANA/4 - i*(2*l + 7), ALTURA_VENTANA/4 - a)
+        galapagar.rectangle(t,l,a,ANCHURA_VENTANA/4 - i*(2*l + 7), ALTURA_VENTANA/4 - 2*a - 13)
+        galapagar.rectangle(t,l,a,ANCHURA_VENTANA/4 - i*(2*l + 7), ALTURA_VENTANA/4 - 3*a - 26)
 
     galapagar.finish(the_window)
 
