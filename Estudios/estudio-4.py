@@ -20,42 +20,9 @@ def main():
     t = galapagar.new_turtle("red",5,"turtle")
     l = 100
 
-    # Fila 1
-    galapagar.square(t,l,-ANCHURA_VENTANA/2, -ALTURA_VENTANA/2 + 3*l)
-
-    galapagar.square(t,l,-ANCHURA_VENTANA/2 + l, -ALTURA_VENTANA/2 + 3*l)
-
-    galapagar.square(t,l,-ANCHURA_VENTANA/2 + 2*l, -ALTURA_VENTANA/2 + 3*l)
-
-    galapagar.square(t,l,-ANCHURA_VENTANA/2 + 3*l, -ALTURA_VENTANA/2 + 3*l)
-
-    # Fila 2 
-    galapagar.square(t,l,-ANCHURA_VENTANA/2, -ALTURA_VENTANA/2 + 2*l)
-
-    galapagar.square(t,l,-ANCHURA_VENTANA/2 + l, -ALTURA_VENTANA/2 + 2*l)
-
-    galapagar.square(t,l,-ANCHURA_VENTANA/2 + 2*l, -ALTURA_VENTANA/2 + 2*l)
-
-    galapagar.square(t,l,-ANCHURA_VENTANA/2 + 3*l, -ALTURA_VENTANA/2 + 2*l)
-
-    # Fila 3
-    galapagar.square(t,l,-ANCHURA_VENTANA/2, -ALTURA_VENTANA/2 + l)
-
-    galapagar.square(t,l,-ANCHURA_VENTANA/2 + l, -ALTURA_VENTANA/2 + l)
-
-    galapagar.square(t,l,-ANCHURA_VENTANA/2 + 2*l, -ALTURA_VENTANA/2 + l)
-
-    galapagar.square(t,l,-ANCHURA_VENTANA/2 + 3*l, -ALTURA_VENTANA/2 + l)
-
-    # Fila 4
-    galapagar.square(t,l,-ANCHURA_VENTANA/2, -ALTURA_VENTANA/2)
-
-    galapagar.square(t,l,-ANCHURA_VENTANA/2 + l, -ALTURA_VENTANA/2)
-
-    galapagar.square(t,l,-ANCHURA_VENTANA/2 + 2*l, -ALTURA_VENTANA/2)
-
-    galapagar.square(t,l,-ANCHURA_VENTANA/2 + 3*l, -ALTURA_VENTANA/2)
-
+    for i in range(0,4):
+        for j in range(0,4):
+            galapagar.square(t,l,-ANCHURA_VENTANA/2 + i*l, -ALTURA_VENTANA/2 + j*l)
 
     galapagar.finish(the_window)
 
