@@ -17,7 +17,7 @@ def main():
     #
     # ...
     
-    t = galapagar.new_turtle("black",1,"turtle")
+    t = galapagar.new_turtle("black",5,"turtle")
     l = 10
     inc = 0
 
