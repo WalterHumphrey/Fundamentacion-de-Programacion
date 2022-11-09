@@ -20,11 +20,22 @@ def main():
     t = galapagar.new_turtle("green",1,"turtle")
     l = 100
     a = 50
-
+    
     for i in range(1,4):
-        galapagar.rectangle(t,l,a,ANCHURA_VENTANA/4 - i*(2*l + 7), ALTURA_VENTANA/4 - a)
-        galapagar.rectangle(t,l,a,ANCHURA_VENTANA/4 - i*(2*l + 7), ALTURA_VENTANA/4 - 2*a - 13)
-        galapagar.rectangle(t,l,a,ANCHURA_VENTANA/4 - i*(2*l + 7), ALTURA_VENTANA/4 - 3*a - 26)
+        d = 0
+        if i == 1:
+            inc = -1
+            d = -7
+        elif i == 2:
+            inc = 1
+            d = 0
+        else:
+            inc = 3
+            d = 7
+            
+        galapagar.rectangle(t,l,a,-50*inc-d,25+13)
+        galapagar.rectangle(t,l,a,-50*inc-d,-25)
+        galapagar.rectangle(t,l,a,-50*inc-d,-75-13)
 
     galapagar.finish(the_window)
 
