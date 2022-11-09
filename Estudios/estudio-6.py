@@ -17,7 +17,7 @@ def main():
     #
     # ...
     
-    t = galapagar.new_turtle("green",1,"turtle")
+    t = galapagar.new_turtle("green",10,"turtle")
     l = 100
     a = 50
     
@@ -32,7 +32,7 @@ def main():
         else:
             inc = 3
             d = 7
-            
+
         galapagar.rectangle(t,l,a,-50*inc-d,25+13)
         galapagar.rectangle(t,l,a,-50*inc-d,-25)
         galapagar.rectangle(t,l,a,-50*inc-d,-75-13)
