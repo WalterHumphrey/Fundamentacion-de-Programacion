@@ -47,10 +47,10 @@ def digito(n):
         sn = "0" + str(n) # Ajuste de tamaño de string
         dis_num(null,2) # Apagamos leds columnas 0 y 1
     else:
-        n2 = int(sn[0]) # Digito filas 0 y 1
-        dis_num(fonts[n2],2) # Funcion para desplegar digito en filas 0 y 1
-    n1 = int(sn[1]) # Digito filas 3 y 4
-    dis_num(fonts[n1],1) # Funcion para desplegar digito en filas 3 y 4
+        n2 = int(sn[0]) # Digito columnas 0 y 1
+        dis_num(fonts[n2],2) # Funcion para desplegar digito en columnas 0 y 1
+    n1 = int(sn[1]) # Digito columnas 3 y 4
+    dis_num(fonts[n1],1) # Funcion para desplegar digito en columnas 3 y 4
 
 def main():
     # Variables de tiempo
