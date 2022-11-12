@@ -55,8 +55,8 @@ def digito(n):
 def main():
     # Variables de tiempo
     seg = 0
-    m = 59
-    h = 23
+    m = 0
+    h = 0
 
     while True:
         # A los 59 segundos reiniciamos su valor y sumamos 1 minuto
@@ -77,20 +77,20 @@ def main():
         # Desplegamos segundos
         digito(seg)
 
-        # Mostrar minutos si se presiona el boton A
+        # Mostrar horas si se presiona el boton A
         if button_a.is_pressed():
-            # Si no ha pasado un minuto los leds estaran apagados
+            # Si no ha pasado una hora los leds estaran apagados
             if m != 0:
-                digito(m) # Desplegamos minutos
+                digito(h) # Desplegamos horas
             else:
                 dis_num(null,1)
                 dis_num(null,2)
 
-        # Mostrar horas si se presiona el boton B
+        # Mostrar minutos si se presiona el boton B
         if button_b.is_pressed():
-            # Si no ha pasado una hora los leds estaran apagados
+            # Si no ha pasado un minuto los leds estaran apagados
             if h != 0:
-                digito(h) # Desplegamos horas
+                digito(m) # Desplegamos minutos
             else:
                 dis_num(null,1)
                 dis_num(null,2)
