@@ -3,6 +3,22 @@ from microbit import *
 # Maximo de tuplas en lista
 MAX = 100
 
+# Funcion para calcular aceleracion maxima
+def max_a(acc):
+    r = 0 # Inicializamos valor en 0
+    for a in range(len(acc)): # Recorremos la lista de aceleraciones
+        if r < acc[a]: # Si la aceleracion a comparar es mayor a r, r toma su valor
+            r = acc[a]
+    return r # Se regresa r (aceleracion maxima)
+
+# Funcion para calcular aceleracion minima
+def min_a(acc):
+    r = 0 # Inicializamos valor en 0
+    for a in range(len(acc)): # Recorremos la lista de aceleraciones
+        if r > acc[a]: # Si la aceleracion a comparar es menor a r, r toma su valor
+            r = acc[a]
+    return r # Se regresa r (aceleracion minima)
+
 def main():
     # Lista de tuplas de tamaño MAX
     readings = [(0, 0, 0)] * MAX
@@ -32,6 +48,7 @@ def main():
             meanx = sum(ax) / j
             meany = sum(ay) / j
             meanz = sum(az) / j
+
         # Calculamos el promedio de aceleracion por eje cuando reading tiene MAX datos
         else:
             meanx = sum(ax) / MAX
@@ -42,12 +59,12 @@ def main():
 
         # Si el boton a es presionado desplegamos en el diplay la aceleracion maxima por eje
         if button_a.is_pressed():
-            max_r = "Max x= " + str(max(ax)) + "Max y= " + str(max(ay)) + "Max z= " + str(max(az))
+            max_r = "Max x= " + str(max_a(ax)) + "Max y= " + str(max_a(ay)) + "Max z= " + str(max_a(az))
             display.scroll(max_r)
 
         # Si el boton a es presionado desplegamos en el diplay la aceleracion minima por eje
         if button_b.is_pressed():
-            min_r = "Min x= " + str(min(ax)) + "Min y= " + str(min(ay)) + "Min z= " + str(min(az))
+            min_r = "Min x= " + str(min_a(ax)) + "Min y= " + str(min_a(ay)) + "Min z= " + str(min_a(az))
             display.scroll(min_r)
 
         # Sumamos 1 al contador de lecturas para rellenar la lista
