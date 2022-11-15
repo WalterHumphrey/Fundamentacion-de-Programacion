@@ -4,17 +4,17 @@ from microbit import *
 MAX = 100
 
 # Funcion para calcular aceleracion maxima
-def max_a(acc):
-    r = 0 # Inicializamos valor en 0
-    for a in range(len(acc)): # Recorremos la lista de aceleraciones
+def max_a(acc,j):
+    r = acc[0] # r toma el valor de la primera aceleracion
+    for a in range(j): # Recorremos la lista de aceleraciones hasta donde se hayan tomado medidas
         if r < acc[a]: # Si la aceleracion a comparar es mayor a r, r toma su valor
             r = acc[a]
     return r # Se regresa r (aceleracion maxima)
 
 # Funcion para calcular aceleracion minima
-def min_a(acc):
-    r = 0 # Inicializamos valor en 0
-    for a in range(len(acc)): # Recorremos la lista de aceleraciones
+def min_a(acc,j):
+    r = acc[0] # r toma el valor de la primera aceleracion
+    for a in range(j): # Recorremos la lista de aceleraciones hasta donde se hayan tomado medidas
         if r > acc[a]: # Si la aceleracion a comparar es menor a r, r toma su valor
             r = acc[a]
     return r # Se regresa r (aceleracion minima)
@@ -59,12 +59,12 @@ def main():
 
         # Si el boton a es presionado desplegamos en el diplay la aceleracion maxima por eje
         if button_a.is_pressed():
-            max_r = "Max x= " + str(max_a(ax)) + "Max y= " + str(max_a(ay)) + "Max z= " + str(max_a(az))
+            max_r = "Max x= " + str(max_a(ax,j)) + "Max y= " + str(max_a(ay,j)) + "Max z= " + str(max_a(az,j))
             display.scroll(max_r)
 
         # Si el boton a es presionado desplegamos en el diplay la aceleracion minima por eje
         if button_b.is_pressed():
-            min_r = "Min x= " + str(min_a(ax)) + "Min y= " + str(min_a(ay)) + "Min z= " + str(min_a(az))
+            min_r = "Min x= " + str(min_a(ax,j)) + "Min y= " + str(min_a(ay,j)) + "Min z= " + str(min_a(az,j))
             display.scroll(min_r)
 
         # Sumamos 1 al contador de lecturas para rellenar la lista
