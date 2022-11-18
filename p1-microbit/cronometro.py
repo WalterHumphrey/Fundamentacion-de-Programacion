@@ -41,7 +41,7 @@ def dis_num(num,sel):
 # Funcion que llama a dis_num dependiendo si hay 1 o 2 digitos
 def digito(n):
     # Convertimos numero a string
-    sn= str(n)
+    sn = str(n)
     # Antes de los 10 segundos solo despliega 1 digito
     if n < 10:
         sn = "0" + str(n) # Ajuste de tamaño de string
@@ -80,7 +80,7 @@ def main():
         # Mostrar horas si se presiona el boton A
         if button_a.is_pressed():
             # Si no ha pasado una hora los leds estaran apagados
-            if m != 0:
+            if h != 0:
                 digito(h) # Desplegamos horas
             else:
                 dis_num(null,1)
@@ -89,7 +89,7 @@ def main():
         # Mostrar minutos si se presiona el boton B
         if button_b.is_pressed():
             # Si no ha pasado un minuto los leds estaran apagados
-            if h != 0:
+            if m != 0:
                 digito(m) # Desplegamos minutos
             else:
                 dis_num(null,1)
