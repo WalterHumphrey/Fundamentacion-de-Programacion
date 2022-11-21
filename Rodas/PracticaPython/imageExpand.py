@@ -16,7 +16,7 @@ def double(oldimage):
 
     return newim
 
-img = image.Image("luther.jpg")
+img = image.Image("libro/luther.jpg")
 win = image.ImageWin(img.getWidth()*2, img.getHeight()*2)
 
 bigimg = double(img)

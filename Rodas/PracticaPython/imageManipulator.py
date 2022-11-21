@@ -20,7 +20,7 @@ def graypixel(oldpixel):
     return newPixel
 
 win = image.ImageWin()
-img = image.Image("luther.jpg")
+img = image.Image("libro/luther.jpg")
 
 newim = pixelMapper(img, graypixel)
 newim.draw(win)
