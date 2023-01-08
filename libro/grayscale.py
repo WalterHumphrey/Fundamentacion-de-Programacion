@@ -1,6 +1,6 @@
 import image
 
-img = image.Image("libro/luther.jpg")
+img = image.Image("luther.jpg")
 win = image.ImageWin(img.getWidth(), img.getHeight())
 img.draw(win)
 #gray = 0.2989 * r + 0.5870 * g + 0.1140 * b
