@@ -25,9 +25,9 @@ def main():
 
     for i in range(1,11):
         galapagar.square(t,l-inc,-ANCHURA_VENTANA/4-l+inc/2,ALTURA_VENTANA/2-l+inc/2)
-        galapagar.square(t,l2-inc2,ANCHURA_VENTANA/2-l2-inc2/2,ALTURA_VENTANA/2-l2-inc2/2)
+        galapagar.square(t,l2+inc2,ANCHURA_VENTANA/2-l2-inc2/2,ALTURA_VENTANA/2-l2-inc2/2)
         inc += 20
-        inc2 +=24
+        inc2 -=24
 
     galapagar.finish(the_window)
 
